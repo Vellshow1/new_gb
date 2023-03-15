@@ -9,3 +9,9 @@
 # Output: YES
 
 
+n =0
+res = 1
+
+while n > 0:
+    res =res * n
+    print (res)
