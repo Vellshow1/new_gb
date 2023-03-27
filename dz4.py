@@ -30,22 +30,22 @@ import random
 # В этом фермерском хозяйстве внедрена система автоматического сбора черники. Эта система состоит из управляющего модуля и нескольких собирающих модулей. Собирающий модуль за один заход, находясь непосредственно перед некоторым кустом, собирает ягоды с этого куста и с двух соседних с ним.
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 
-number = int(input('Введите кол-во кустов: '))
+# number = int(input('Введите кол-во кустов: '))
 
-i = 1
-sum = 0
-max_i = 0
-array = []
-for i in range(number):
-    array.append(random.randint(1, 31))
-print(array)
+# i = 1
+# sum = 0
+# max_i = 0
+# array = []
+# for i in range(number):
+#     array.append(random.randint(1, 31))
+# print(array)
 
-while i < len(array):
-    sum_1 = array[i-1]+array[i]+array[i+1]
-    if sum < sum_1:
-        max_i +=i
-        sum = sum_1
-        i +=1
-    else:
-        i+1
-print(sum)
+# while i < len(array):
+#     sum_1 = array[i-1]+array[i]+array[i+1]
+#     if sum < sum_1:
+#         max_i +=i
+#         sum = sum_1
+#         i +=1
+#     else:
+#         i+1
+# print(sum)

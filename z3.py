@@ -10,16 +10,20 @@
         
 # print(sum_array)
 
-list = [1,2,3,4,5,6]
+# def palen (a):
+#     if len(a) <=1:
+#         return True
+#     if a[0] != a[-1]:
+#         return False
+#     else:
+#         return palen(a[1:-1])
+    
+# print(palen('шалашa'))
 
-
-i = 0 
-
-
-while i < len(list):
-    sum = 0
-    sum = list[i]
-    list[i] = list[i-1]
-    list[i-1] = sum
-    i+=1
-print(list)
+def newtext(list):
+    if len(list) == 1 or len(list) == 2:
+        return list
+    return list[0] +'(' + newtext(list[1:-1]) +')' + list[-1]
+    
+list =input()
+print(newtext(list))
