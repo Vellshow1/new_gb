@@ -63,6 +63,28 @@ def change_entry(filename):
     else: print(f"Данного ID пользователя, не найдено. Напишите еще раз! ") 
     change_entry(filename)
 
+def delete_entry(filename):
+    number = input("Введите ID пользователя, которого хотите удалить: ")
+    data_array = read_file(filename)
+    for i in range(1,len(data_array)):
+        if data_array[i][0] == number:
+            print("ID: ", data_array[i][0], "Фамилия: ", data_array[i][1],"Имя: ", data_array[i][2], "Отчество: ", data_array[i][3], "Телефон: ", data_array[i][4])
+            yes_no = input('Хотите удалить данные: да или нет: ')
+            a = yes_no.lower()
+            if a == 'да':
+                lastname = '-'
+                firstname = '-'
+                secondname = '-'
+                phone = '-'
+                data_array[i][1] = lastname
+                data_array[i][2] = firstname
+                data_array[i][3] = secondname
+                data_array[i][4] = phone
+                write_file(filename, data_array)
+                return data_array
+            return print('Пока')
+    else: print(f"Данного ID пользователя, не найдено. Напишите еще раз! ") 
+    delete_entry(filename)
 
 def menu():
     print('Добро пожаловать в телефонный справочник!')
